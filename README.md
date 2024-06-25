@@ -1,17 +1,17 @@
 # riders-experiment
 
-API RESTful para Busca de Motociclistas
+RESTful API for Finding Motorcyclists
 
 **User Story:**
 
-Como usuário, 
-quero pesquisar motociclistas por cidade 
-para que eu possa facilmente localizar os amigos em cada cidade.
+As a user, 
+I want to search for motorcyclists by city 
+so that I can easily locate friends in each city.
 
-**Critérios de Aceitação:**
+**Acceptance Criteria:**
 
-* A API deve receber o nome da cidade como parâmetro.
-* A API deve retornar um JSON com os seguintes campos para cada motociclista encontrado:
+* The API should accept the city name as a parameter.
+* The API should return a JSON with the following fields for each motorcyclist found:
     * id
     * name
     * city
@@ -19,7 +19,7 @@ para que eu possa facilmente localizar os amigos em cada cidade.
     * longitude
     * brand
     * model
-    * status (true ou false)
+    * status (true or false)
 
 **Endpoint:**
 
@@ -50,46 +50,46 @@ GET /riders?city={city_name}
     "status": false
   }
 ]
-
 ```
 
-Para executar o arquivo riders.py, você pode seguir estas etapas:
+To run the file riders.py, you can follow these steps:
 
-1. Abra um terminal ou prompt de comando: Navegue até o diretório onde o arquivo riders.py está salvo usando o comando cd.
+1. Open a terminal or command prompt: Navigate to the directory where the file riders.py is saved using the cd command.
 
-2. Crie um ambiente virtual (opcional): É recomendável criar um ambiente virtual para isolar o código e as dependências do projeto. Você pode criar um ambiente virtual usando o comando python3 -m venv venv (no Linux ou macOS) ou py -3 -m venv venv (no Windows).
+2. Create a virtual environment (optional): It is recommended to create a virtual environment to isolate the code and project dependencies. You can create a virtual environment using the command python3 -m venv venv (on Linux or macOS) or py -3 -m venv venv (on Windows).
 
-3. Ative o ambiente virtual (opcional): Depois de criar o ambiente virtual, você precisa ativá-lo. No Linux ou macOS, use o comando source venv/bin/activate. No Windows, use o comando venv\Scripts\activate.
+3. Activate the virtual environment (optional): After creating the virtual environment, you need to activate it. On Linux or macOS, use the command source venv/bin/activate. On Windows, use the command venv\Scripts\activate.
 
-4. Instale as dependências: O arquivo riders.py depende do Flask e do módulo json. Instale essas dependências usando o comando pip install flask e pip install json.
+4. Install dependencies: The file riders.py depends on Flask and the json module. Install these dependencies using the command pip install flask and pip install json.
 
-5. Execute o aplicativo: Execute o arquivo riders.py usando o comando python3 riders.py.
+5. Run the application: Run the file riders.py using the command python3 riders.py.
 
-6. Teste a API: Depois que o aplicativo estiver em execução, você pode testar a API acessando o seguinte URL em um navegador da Web:
+6. Test the API: Once the application is running, you can test the API by accessing the following URL in a web browser:
 
 ```
 http://127.0.0.1:5000/riders?city=São Paulo
 http://127.0.0.1:5000/riders?city=ALL
-
 ```
-Isso retornará uma lista de motociclistas que estão localizados em São Paulo. Você pode substituir "São Paulo" pelo nome de qualquer outra cidade para filtrar os motociclistas por cidade.
 
-Observação: Certifique-se de que o arquivo riders.json esteja no mesmo diretório que o arquivo riders.py.
+This will return a list of motorcyclists located in São Paulo. You can replace "São Paulo" with the name of any other city to filter motorcyclists by city.
 
-**Executar Testes**
+Note: Make sure the file riders.json is in the same directory as the file riders.py.
 
+**Running Tests**
+
+```python
 if __name__ == '__main__':
     unittest.main()
+```
 
-Como executar os testes:
+How to run the tests:
 
-* Salve o código acima em um arquivo chamado test_riders.py no mesmo diretório do arquivo riders.py.
-* Abra um terminal ou prompt de comando e navegue até o diretório onde os arquivos estão salvos.
-* Execute o seguinte comando:
+* Save the code above in a file called test_riders.py in the same directory as the file riders.py.
+* Open a terminal or command prompt and navigate to the directory where the files are saved.
+* Run the following command:
 
 ```console
 python3 test_riders.py
 ```
 
-Os testes serão executados e os resultados serão exibidos no terminal.
-
+The tests will run and the results will be displayed in the terminal.
