@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mapa de Riders</title>
+  <!-- Importa a API do Google Maps -->
+  <script>
+    (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+      key: "AIzaSyBBh4NKQrcnqeXOPKP6qJRE4o2rautdXvo",
+      // Adicione outros parâmetros de inicialização conforme necessário, usando camel case.
+      // Use o parâmetro 'v' para indicar a versão a ser carregada (alfa, beta, semanal, etc.)
+    });
+  </script>
+  <style>
+    #map {
+      height: 60vh;
+      width: 80%;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 20px;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+    }
+
+    li {
+      background-color: #efefef;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Mapa de Riders</h1>
+    <p>Veja a localização dos riders no Google Maps.</p>
+    <div id="map"></div>
+    <ul id="riders-list"></ul>
+  </div>
+
+  <!-- Inicializa o mapa -->
+  <script>
+    // Inicializa o mapa
+    let map;
+
+    async function initMap() {
+      const { Map } = await google.maps.importLibrary("maps");
+    
+      map = new Map(document.getElementById("map"), {
+        center: { lat: -19.924444, lng: -43.938889 },
+        zoom: 4,
+        streetViewControl: true,
+        mapTypeId: "roadmap",
+      });
+    }
+    
+    initMap();
+
+    // Cria os marcadores para cada rider
+    function addMarkers() {
+      // Faz a chamada para a API riders
+      fetch('http://127.0.0.1:5000/riders?city=ALL')
+        .then(response => response.json())
+        .then(data => {
+          data.forEach(rider => {
+            const marker = new google.maps.Marker({
+              title: rider.name + " - " + rider.brand + " - " + rider.model,
+              position: {lat: rider.latitude, lng: rider.longitude},
+              map: map
+            });
+
+            const listItem = document.createElement('li');
+            listItem.textContent = rider.name;
+
+            document.getElementById('riders-list').appendChild(listItem);
+
+            marker.addListener('click', () => {
+              listItem.scrollIntoView({ behavior: "smooth", block: "center" });
+            });
+          });
+        });
+    }
+
+    addMarkers(); 
+
+  </script>
+</body>
+</html>
