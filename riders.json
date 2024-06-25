@@ -1,0 +1,119 @@
+[
+  {
+    "name": "João",
+    "brand": "Harley Davidson",
+    "model": "Sportster 883",
+    "city": "São Paulo",
+    "longitude": -46.633333,
+    "latitude": -23.550556,
+    "status": true
+  },
+  {
+    "name": "Maria",
+    "brand": "Harley Davidson",
+    "model": "Fat Boy",
+    "city": "Rio de Janeiro",
+    "longitude": -43.172896,
+    "latitude": -22.906847,
+    "status": false
+  },
+  {
+    "name": "Pedro",
+    "brand": "Harley Davidson",
+    "model": "Street Glide",
+    "city": "Brasília",
+    "longitude": -47.882503,
+    "latitude": -15.794229,
+    "status": true
+  },
+  {
+    "name": "Ana",
+    "brand": "Harley Davidson",
+    "model": "Road King",
+    "city": "Salvador",
+    "longitude": -38.510139,
+    "latitude": -12.971111,
+    "status": false
+  },
+  {
+    "name": "Paulo",
+    "brand": "Harley Davidson",
+    "model": "Electra Glide",
+    "city": "Fortaleza",
+    "longitude": -38.543889,
+    "latitude": -3.718111,
+    "status": true
+  },
+  {
+    "name": "Carla",
+    "brand": "Harley Davidson",
+    "model": "Road Glide",
+    "city": "Belo Horizonte",
+    "longitude": -43.934597,
+    "latitude": -19.924444,
+    "status": false
+  },
+  {
+    "name": "Lucas",
+    "brand": "Harley Davidson",
+    "model": "CVO Street Glide",
+    "city": "Curitiba",
+    "longitude": -49.265278,
+    "latitude": -25.427778,
+    "status": true
+  },
+  {
+    "name": "Rafaela",
+    "brand": "Harley Davidson",
+    "model": "CVO Road Glide",
+    "city": "Porto Alegre",
+    "longitude": -51.230278,
+    "latitude": -30.031111,
+    "status": false
+  },
+  {
+    "name": "Thiago",
+    "brand": "Harley Davidson",
+    "model": "Tri Glide",
+    "city": "Recife",
+    "longitude": -34.881944,
+    "latitude": -8.053889,
+    "status": true
+  },
+  {
+    "name": "Fernanda",
+    "brand": "Harley Davidson",
+    "model": "Freewheeler",
+    "city": "Goiânia",
+    "longitude": -49.253056,
+    "latitude": -16.678889,
+    "status": false
+  },
+  {
+    "name": "Gustavo",
+    "brand": "Harley Davidson",
+    "model": "Roadster",
+    "city": "Manaus",
+    "longitude": -60.025094,
+    "latitude": -3.1075,
+    "status": true
+  },
+  {
+    "name": "Juliana",
+    "brand": "Harley Davidson",
+    "model": "Breakout",
+    "city": "Belém",
+    "longitude": -48.489444,
+    "latitude": -1.451667,
+    "status": false
+  },
+  {
+    "name": "Ricardo",
+    "brand": "Harley Davidson",
+    "model": "Low Rider S",
+    "city": "São Luís",
+    "longitude": -44.292222,
+    "latitude": -2.539167,
+    "status": true
+  }
+]
