@@ -1,5 +1,4 @@
 # riders-experiment
-Ridesrs
 
 API RESTful para Busca de Motociclistas
 
