@@ -1,6 +1,6 @@
 # Riders Experiment
 
-RESTful API to search riders
+RESTful API to search riders and show up with Google Maps Javascript API 
 
 **User Story:**
 
