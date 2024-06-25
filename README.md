@@ -1,4 +1,4 @@
-# riders-experiment
+# Riders Experiment
 
 RESTful API for Finding Motorcyclists
 
