@@ -1,4 +1,4 @@
-# Riders Experiment
+# Riders API
 
 RESTful API to search for riders and display their locations using the Google Maps JavaScript API
 
